@@ -1,0 +1,25 @@
+<%- include('sign-in-header') -%>
+
+<div class="verification-step-3">
+  <img src="images/check-circle.png" alt="" class="check" />
+  <p class="step-num">step <strong>1</strong> of <strong>3</strong></p>
+  <h1 class="choose-plan">Choose your plan.</h1>
+  <div class="feature-box">
+    <div class="feature">
+      <img src="images/check.png" alt="" class="tick-img" />
+      <p class="feature-name">No commitments, cancel anytime.</p>
+    </div>
+    <div class="feature">
+      <img src="images/check.png" alt="" class="tick-img" />
+      <p class="feature-name">Everything on Netflix for one low price.</p>
+    </div>
+    <div class="feature">
+      <img src="images/check.png" alt="" class="tick-img" />
+      <p class="feature-name">No ads and no extra fees.Ever.</p>
+    </div>
+  </div>
+
+  <form action="/selectplan" method="post">
+    <button class="step2-but" type="submit">next</button>
+  </form>
+</div>

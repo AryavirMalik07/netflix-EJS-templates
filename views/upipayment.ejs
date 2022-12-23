@@ -1,0 +1,31 @@
+<%- include('sign-in-header') -%>
+<div class="upi-payment-section">
+  <p class="step-num">step <strong>3</strong> of <strong>3</strong></p>
+  <h1 class="heading-upi">Pay using UPI</h1>
+  <form class="upi-form" action="/success" method="post">
+    <select class="bank-name" name="expireMM" id="expireMM">
+      <option value="">Select bank</option>
+      <option value="01">SBI</option>
+      <option value="02">Axis</option>
+      <option value="03">ICICI</option>
+      <option value="04">CANARA BANK</option>
+      <option value="05">AMERICAN EXPRESS</option>
+      <option value="06">G PAY</option>
+      <option value="07">HDFC</option>
+      <option value="08">Punjab National Bank</option>
+      <option value="09">Syndicate Bank</option>
+    </select>
+
+    <input
+      class="inputCard"
+      type="hidden"
+      name="expiry"
+      id="expiry"
+      maxlength="4"
+      required
+    />
+    <input type="number" placeholder="UPI ID" required />
+
+    <button class="step2-but" type="submit">Start Membership</button>
+  </form>
+</div>

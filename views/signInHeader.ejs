@@ -1,0 +1,21 @@
+<%- include('sign-in-header') -%>
+
+<section class="section-setup-step">
+  <img src="images/step1-img.png" alt="" class="steps step1-img" />
+  <p class="step-num">step <strong>1</strong> of <strong>3</strong></p>
+  <h1 class="heading-setup">Finish setting up your account</h1>
+  <p class="description">
+    Netflix is personalised for you.Create a password to watch on any device at
+    any time.
+  </p>
+  <form action="/signin" method="post">
+    <input
+      type="email"
+      name="firstMail"
+      class="hide-email-box"
+      value="<%= hiddenMail %> "
+    />
+    <button class="submit-step" type="submit">next</button>
+  </form>
+</section>
+<%- include('sign-in-footer') -%>

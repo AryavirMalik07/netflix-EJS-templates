@@ -1,0 +1,97 @@
+<%- include('sign-in-header') -%>
+<div class="card-payment-step">
+  <div class="card-payment-content">
+    <p class="step-num">step <strong>3</strong> of <strong>3</strong></p>
+    <h1 class="heading-card">Set up your credit or debit card</h1>
+
+    <div class="card-images">
+      <img
+        src="images/BrandLogo.org - American Express Logo.png"
+        alt=""
+        class="bank-img"
+      />
+      <img src="images/mastercard-26128.png" alt="" class="bank-img" />
+      <img src="images/visa-logo-png-2020.png" alt="" class="bank-img" />
+    </div>
+  </div>
+
+  <form class="card-details-form" action="" method="post">
+    <input type="text" placeholder="First name" required />
+    <input type="text" placeholder="Last name" required />
+    <input
+      type="tel"
+      inputmode="numeric"
+      pattern="[0-9\s]{13,19}"
+      autocomplete="cc-number"
+      maxlength="19"
+      placeholder="Card number"
+      required
+    />
+    <!-- <input name="expiry" type="month" required /> -->
+    <!-- <input class="inputCard" type="text" name="expiry" id="expiry" /> -->
+    <div class="expiry-date">
+      <select name="expireMM" id="expireMM">
+        <option value="">Month</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      <select name="expireYY" id="expireYY">
+        <option value="">Year</option>
+        <option value="20">2022</option>
+        <option value="21">2023</option>
+        <option value="22">2024</option>
+        <option value="23">2025</option>
+        <option value="24">2026</option>
+        <option value="24">2027</option>
+        <option value="24">2028</option>
+        <option value="24">2029</option>
+      </select>
+      <input
+        class="inputCard"
+        type="hidden"
+        name="expiry"
+        id="expiry"
+        required
+        maxlength="4"
+      />
+    </div>
+
+    <!-- cvv -->
+    <div class="card-cvv">
+      <input class="cvv-box" type="text" placeholder="CVV" maxlength="3" />
+      <button class="about-cvv">?</button>
+    </div>
+  </form>
+
+  <p class="payment-description">
+    Any payment above &#8377; 2000 shall need additional authentication
+  </p>
+
+  <form action="/success" method="post">
+    <button class="step2-but" type="submit">Start Membership</button>
+  </form>
+</div>
+<div class="cvv-hiden-page">
+  <button class="hide-page">-</button>
+  <div class="what-is-cvv">
+    <p class="cvv-des">
+      Your card's security code (CVV) is the 3 or 4 digit number located on the
+      back of most cards.
+    </p>
+
+    <img src="images/cvv-img-2.png" alt="" class="cvv-img" />
+    <img src="images/amex_cvv_2x.png" alt="" class="cvv-img" />
+  </div>
+</div>
+<div class="overlay hidden"></div>
+<%- include('sign-in-footer') -%>

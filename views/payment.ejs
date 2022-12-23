@@ -1,0 +1,41 @@
+<%- include('sign-in-header') -%>
+<section class="payment-section">
+  <p class="step-num">step <strong>3</strong> of <strong>3</strong></p>
+  <h1 class="payment-heading">Choose how to pay</h1>
+  <p class="para-describing">You're getting the <strong>Basic Plan.</strong></p>
+  <p class="secure">
+    <strong>Secure for peace of mind.</strong> <br />
+    <strong>Cancel easily online.</strong>
+  </p>
+  <form action="/cardpayment" method="post">
+    <button class="payment-method" type="submit">
+      <p class="payment-name">Credit or Debit Card</p>
+      <div class="bank-images">
+        <img src="images/visa-logo-png-2020.png" alt="" class="bank-name" />
+        <img
+          src="images/BrandLogo.org - American Express Logo.png"
+          alt=""
+          class="bank-name"
+        />
+        <img src="images/mastercard-26128.png" alt="" class="bank-name" />
+      </div>
+    </button>
+  </form>
+
+  <form action="/upipayment" method="post">
+    <button class="payment-method" type="submit">
+      <p class="payment-name">UPI AutoPay</p>
+      <div class="bank-images">
+        <img src="images/visa-logo-png-2020.png" alt="" class="bank-name" />
+        <img
+          src="images/BrandLogo.org - American Express Logo.png"
+          alt=""
+          class="bank-name"
+        />
+        <img src="images/mastercard-26128.png" alt="" class="bank-name" />
+      </div>
+    </button>
+  </form>
+</section>
+
+<!-- <%- include('sign-in-footer') -%> -->

@@ -1,0 +1,29 @@
+<%- include('sign-in-header') -%>
+<section class="section-code">
+  <div class="verification-section">
+    <div class="verification-page-2">
+      <div class="verification-content">
+        <p class="step-num">step <strong>1</strong> of <strong>3</strong></p>
+        <h1 class="step-heading">Create a password to start your membership</h1>
+        <p class="step-describe">
+          Just a few more steps and you're done! We hate paperwork, too.
+        </p>
+      </div>
+      <form action="/step2of3" class="step-2-form" method="post">
+        <input
+          class="input-one"
+          type="email"
+          placeholder="email"
+          value=" <%= userEmail %> "
+        />
+        <input
+          class="input-two"
+          type="password"
+          placeholder="Add a password"
+          required
+        />
+        <button class="step2-but" type="submit">next</button>
+      </form>
+    </div>
+  </div>
+</section>
